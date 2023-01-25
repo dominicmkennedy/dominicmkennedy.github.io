@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Singing Cells</title>
+<script defer src="index.js"></script></head>
+
+<body>
+  <div class="vh-100 row g-0">
+    <div class="col-lg-9 container h-100 pt-2 pb-2" id="canvasContainer" style="display: none;">
+      <canvas id="canvas" class="h-100 w-100">
+    </div>
+
+    <div class="col-lg-3 container pt-2 pb-2">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Singing Cells</h3>
+          <h6 class="card-subtitle mb-2 text-muted">A project by Dominic Kennedy</h6>
+
+          <form class="needs-validation" id="inputForm" action="javascript:void(0);" novalidate>
+            <div class="form-floating mb-2">
+              <input type="number" class="form-control" id="numCellTypes" name="numCellTypes" min="2" max="16" required>
+              <label for="numCellTypes">Number of cell types</label>
+            </div>
+
+            <div class="form-floating mb-2">
+              <input type="number" class="form-control" id="universeWidth" name="universeWidth" min="4" required>
+              <label for="universeWidth">CA size</label>
+            </div>
+
+            <div class="input-group mb-2">
+              <span class="input-group-text">Automatic seed</span>
+              <div class="input-group-text">
+                <input class="form-check-input" id="seedOption" type="checkbox" checked>
+              </div>
+              <input type="text" id="seed" class="form-control" disabled>
+            </div>
+
+            <div class="mb-2">
+              <label for="ruleDensity" class="form-label">Rule Density: <output
+                  id="ruleDensityOutput">0.5</output></label>
+              <input type="range" class="form-range" id="ruleDensity" name="ruleDensity" value="0.5" min="0" max="1"
+                step="0.01">
+            </div>
+
+            <div class="mb-2">
+              <button class="btn btn-primary" type="submit">Generate</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
